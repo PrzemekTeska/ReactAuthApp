@@ -21,7 +21,7 @@ export default class App extends Component {
 
   checkLoginStatus() {
     axios
-    .get("http://localhost:3001/logged_in", { withCredentials: true })
+    .get("https://rocky-ravine-70769.herokuapp.com/logged_in", { withCredentials: true })
     .then(response => {
       if(response.data.logged_in && this.state.loggedInStatus === "NOT LOGGED IN") {
         this.setState({

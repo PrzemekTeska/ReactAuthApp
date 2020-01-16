@@ -29,7 +29,7 @@ handleSubmit(event) {
     password,
     password_confirmation
   } = this.state;
-  axios.post("http://localhost:3001/registrations", {
+  axios.post("https://rocky-ravine-70769.herokuapp.com/registrations", {
     user: {
       email: email,
       password: password,
