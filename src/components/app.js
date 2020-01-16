@@ -11,7 +11,7 @@ export default class App extends Component {
     super();
 
     this.state = {
-      loggedInStatus: "NOT_LOGGED_IN",
+      loggedInStatus: "NOT LOGGED IN",
       user: {}
     };
 
@@ -23,14 +23,14 @@ export default class App extends Component {
     axios
     .get("http://localhost:3001/logged_in", { withCredentials: true })
     .then(response => {
-      if(response.data.logged_in && this.state.loggedInStatus === "NOT_LOGGED_IN") {
+      if(response.data.logged_in && this.state.loggedInStatus === "NOT LOGGED IN") {
         this.setState({
-          loggedInStatus: "LOGGED_IN",
+          loggedInStatus: "LOGGED IN",
           user: response.data.user
         })
-      } else if (!response.data.logged_in && this.state.loggedInStatus === "LOGGED_IN") {
+      } else if (!response.data.logged_in && this.state.loggedInStatus === "LOGGED IN") {
         this.setState({
-          loggedInStatus: "NOT_LOGGED_IN",
+          loggedInStatus: "NOT LOGGED IN",
           user: {}
       })
     }
@@ -45,13 +45,13 @@ export default class App extends Component {
 
   handleLogout() {
     this.setState({
-      loggedInStatus: "NOT_LOGGED_IN",
+      loggedInStatus: "NOT LOGGED IN",
       user: {}
     })
   }
   handleLogin(data) {
     this.setState({
-      loggedInStatus: "LOGGED_IN",
+      loggedInStatus: "LOGGED IN",
       user: data.user
     });
   }

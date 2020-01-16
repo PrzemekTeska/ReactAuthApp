@@ -61,7 +61,7 @@ handleSubmit(event) {
             onChange={this.handleChange}
             required
             />
-
+            <br/>
             <input
               type="password"
               name = "password"
@@ -70,7 +70,7 @@ handleSubmit(event) {
               onChange={this.handleChange}
               required
               />
-
+              <br/>
               <input
                 type="password"
                 name = "password_confirmation"
@@ -79,8 +79,8 @@ handleSubmit(event) {
                 onChange={this.handleChange}
                 required
                 />
-
-                <button type="submit">Register</button>
+                <br/>
+                <button id = "registerButton" type="submit">Register</button>
           </form>
         </div>);
   }

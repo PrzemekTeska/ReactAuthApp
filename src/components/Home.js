@@ -27,12 +27,22 @@ handleLogoutClick() {
 
   render() {
     return (
-      <div>
-        <h1>Home</h1>
-        <h1>Status: {this.props.loggedInStatus}</h1>
-        <button onClick={() => this.handleLogoutClick()}>Logout</button>
-        <Registration handleSuccessfulAuth ={this.handleSuccessfulAuth}/>
-        <Login handleSuccessfulAuth={this.handleSuccessfulAuth} />
+      <div id = "mainWrapper">
+      <button id = "logoutButton" onClick={() => this.handleLogoutClick()}>Logout</button>
+
+        <div>
+                <h1 id = "loginStatus">You are {this.props.loggedInStatus}</h1>
+                <h1 id = "welcomeText">Welcome to my page!</h1>
+
+                <div id = "registrationWrapper">
+                <Registration handleSuccessfulAuth ={this.handleSuccessfulAuth}/>
+                </div>
+                <br/>
+                <div id = "loginWrapper">
+                <Login handleSuccessfulAuth={this.handleSuccessfulAuth} />
+                </div>
+        </div>
+
       </div>
     );
   }
